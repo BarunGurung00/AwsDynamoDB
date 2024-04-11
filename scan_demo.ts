@@ -2,8 +2,10 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient, ScanCommand } from "@aws-sdk/lib-dynamodb";
 
+Const region: String = "us-east-1";
+
 //Create new DocumentClient
-const client = new DynamoDBClient({});
+const client = new DynamoDBClient({region});
 const documentClient = DynamoDBDocumentClient.from(client);
 
 //Send command and output results
